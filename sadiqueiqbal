@@ -1,0 +1,13 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /var/www/sadiqueiqbal/html;
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name sadiqueiqbal.com www.sadiqueiqbal.com;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sadique Iqbal — DevOps & Web Developer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="logo" href="#">Sadique<span class="dot">.</span></a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="socials">
+        <a href="https://github.com/sadiqueiqbal28" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/sadiqueiqbal28/" target="_blank" rel="noopener"
+          aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Hi, I'm <span class="accent">Sadique</span></h1>
+          <p class="lead">A DevOps Engineer passionate about automation, cloud, and documentation. I build reliable
+            CI/CD pipelines, deploy production-grade apps, and write about what I learn.</p>
+
+          <div class="hero-ctas">
+            <a class="btn primary" href="#projects">See my work</a>
+            <a class="btn outline" href="#contact">Contact me</a>
+          </div>
+
+          <ul class="hero-stats">
+            <li><strong>DevOps</strong><span>CI/CD • Docker • K8s</span></li>
+            <li><strong>Web</strong><span>HTML • CSS • JS</span></li>
+            <li><strong>Cloud</strong><span>AWS • DigitalOcean</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-profile">
+          <div class="profile-card">
+            <img src="assets/profile.jpg" alt="Sadique profile" class="profile-photo"
+              onerror="this.src='https://via.placeholder.com/300x300?text=Profile'" />
+            <div class="profile-info">
+              <h3>Sadique Iqbal</h3>
+              <p>DevOps Engineer • Technical Writer</p>
+              <div class="profile-links">
+                <a href="https://github.com/sadiqueiqbal28" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/sadiqueiqbal28/" target="_blank" rel="noopener">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container about" id="about">
+      <h2>About</h2>
+      <p>
+        Hi, I’m Mohammad Sadique Iqbal, a passionate DevOps Engineer with hands-on experience in cloud platforms,
+        automation, and CI/CD pipelines. I specialize in deploying and managing applications on AWS, Digital Ocean, and
+        containerized environments using Docker and Kubernetes.
+
+        During my time at Big Oh Notation Pvt. Ltd., I worked on real-world projects where I deployed applications as
+        Kubernetes clusters, containerized applications, and configured cloud services like Redis, Kafka, WordPress, and
+        MySQL. Earlier, as a Server Administration Intern at Netcamp Solutions, I gained practical experience in setting
+        up Linux servers, configuring mail and DNS servers, and hosting websites.
+
+      <p>I enjoy building automation pipelines that ensure smooth integration and deployment. Some of my projects
+        include:
+      </p>
+      <p>
+        <ul>
+          <li>A Python-based monitoring and alerting system integrated with Jenkins CI/CD.</li>
+          <li>A CI/CD pipeline for static website deployment using GitHub Actions, AWS EC2, and Nginx.</li>
+        </ul>
+      </p>
+
+      Apart from DevOps, I also have skills in web development (HTML, CSS, JS), server configuration, and scripting in
+      Bash and Python.
+
+      I’m always eager to learn, solve problems, and take on new challenges in the ever-evolving DevOps and cloud
+      ecosystem.
+
+      When I’m not working with servers and pipelines, you’ll probably find me in a restaurant or exploring new
+      tech.
+      </p>
+    </section>
+
+    <section class="container projects" id="projects">
+      <h2>Projects</h2>
+      <div class="grid projects-grid">
+        <article class="card project-card">
+          <div class="card-body">
+            <h3>CI/CD for Static Site</h3>
+            <p>Automated deployment of a static site to Nginx using GitHub Actions and an EC2 self-hosted runner.
+              Workflow includes build, test, and deployment steps.</p>
+            <div class="card-links">
+              <a href="#">Live demo</a>
+              <a href="https://github.com/your-github/ci-cd-static-site" target="_blank">Repo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <div class="card-body">
+            <h3>MySQL on Cloud</h3>
+            <p>Secure MySQL setup on a cloud VM with automated backups and monitoring. Configured firewall, regular
+              dumps, and restore scripts.</p>
+            <div class="card-links">
+              <a href="#">Read write-up</a>
+              <a href="https://github.com/your-github/mysql-cloud-setup" target="_blank">Repo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <div class="card-body">
+            <h3>js-calculator-app</h3>
+            <p>A responsive JavaScript calculator hosted on Nginx, accessible at <code>ipaddr/calculator</code>.
+              Includes automated deployment pipeline.</p>
+            <div class="card-links">
+              <a href="#">Live demo</a>
+              <a href="https://github.com/your-github/js-calculator-app" target="_blank">Repo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container skills" id="skills">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill">Linux</div>
+        <div class="skill">Python</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">Docker</div>
+        <div class="skill">Kubernetes</div>
+        <div class="skill">AWS</div>
+        <div class="skill">Nginx</div>
+        <div class="skill">Ansible</div>
+      </div>
+    </section>
+
+    <section class="container contact" id="contact">
+      <h2>Contact</h2>
+      <p>If you'd like to collaborate or read my blogs, drop a message.</p>
+      <form id="contactForm" class="contact-form">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" rows="5" placeholder="Message" required></textarea>
+        <button class="btn primary" type="submit">Send message</button>
+      </form>
+      <p class="small">Or reach me on <a href="https://github.com/your-github" target="_blank">GitHub</a> or <a
+          href="https://linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Sadique Iqbal — Built with ❤️</p>
+      <nav class="footer-nav">
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

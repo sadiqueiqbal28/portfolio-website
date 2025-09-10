@@ -1,0 +1,44 @@
+name: CI/CD portfolio site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  setup-nginx-server-website:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v5
+
+      - name: Update repositories
+        run: sudo apt-get update -y
+
+      - name: Install and setup nginx
+        run: |
+          sudo apt-get install -y nginx
+          sudo systemctl start nginx
+          sudo systemctl enable nginx
+          sudo mkdir -p /var/www/sadiqueiqbal/html
+          sudo chown -R $USER:$USER /var/www/sadiqueiqbal/html
+          sudo chmod -R 755 /var/www/sadiqueiqbal
+
+      - name: Copy html and conf
+        run: |
+          sudo cp $GITHUB_WORKSPACE/index.html /var/www/sadiqueiqbal/html
+          sudo cp $GITHUB_WORKSPACE/styles.css /var/www/sadiqueiqbal/html
+          sudo cp $GITHUB_WORKSPACE/index.html /var/www/sadiqueiqbal/html
+          sudo cp $GITHUB_WORKSPACE/scripts.js /var/www/sadiqueiqbal/html
+          sudo cp -r $GITHUB_WORKSPACE/assets /var/www/sadiqueiqbal/html
+          sudo cp $GITHUB_WORKSPACE/sadiqueiqbal /etc/nginx/sites-available/sadiqueiqbal
+          sudo ln -sf /etc/nginx/sites-available/sadiqueiqbal /etc/nginx/sites-enabled/
+
+      - name: Check nginx conf
+        run: sudo nginx -t
+
+      - name: Reload nginx
+        run: sudo systemctl reload nginx
+
+      
