@@ -17,6 +17,11 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="logo" href="#">Sadique<span class="dot">.</span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -90,7 +95,6 @@ When I’m not working with servers and pipelines, you’ll probably find me in 
             <p>Automated deployment of this portfolio-website site to Nginx using GitHub Actions and an EC2 self-hosted runner.
               Workflow includes build, test, and deployment steps.</p>
             <div class="card-links">
-              <!-- <a href="#">Live demo</a> -->
               <a href="https://sadiqueiqbal.com" target="_blank" class="curr-site">(Current Website - Automated CI/CD)</a>
             </div>
           </div>
@@ -101,7 +105,6 @@ When I’m not working with servers and pipelines, you’ll probably find me in 
             <h3>CI Pipeline Monitoring & Alerts</h3>
             <p>Built a Python-based monitoring tool integrated with Jenkins to track system resources. Configured automated email alerts for high CPU, memory, or disk usage, with secure secret management and error handling for reliability.</p>
             <div class="card-links">
-              <!-- <a href="#">Read write-up</a> -->
               <a href="https://github.com/sadiqueiqbal28/mail-system-resources.git" target="_blank">Repo</a>
             </div>
           </div>
@@ -129,14 +132,11 @@ When I’m not working with servers and pipelines, you’ll probably find me in 
     <section class="container contact" id="contact">
       <h2>Contact</h2>
       <p>If you'd like to collaborate or read my blogs, drop a message.</p>
-      <form id="contactForm" class="contact-form">
-        <input type="text" name="name" placeholder="Your name" required />
-        <input type="email" name="email" placeholder="Your email" required />
-        <textarea name="message" rows="5" placeholder="Message" required></textarea>
-        <button class="btn primary" type="submit">Send message</button>
-      </form>
-      <p class="small">Or reach me on <a href="https://github.com/your-github" target="_blank">GitHub</a> or <a
-          href="https://linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>.</p>
+      <div class="contact-links">
+        <a class="btn primary" href="mailto:sadiqueiqbal28@gmail.com?subject=Inquiry from your website&body=Hello Sadique,">Send an email</a>
+      </div>
+      <p class="small">Or reach me on <a href="https://github.com/sadiqueiqbal28" target="_blank">GitHub</a> or <a
+          href="https://linkedin.com/in/sadiqueiqbal28" target="_blank">LinkedIn</a>.</p>
     </section>
   </main>
 

@@ -36,6 +36,7 @@ body {
   background: linear-gradient(180deg, rgba(11, 18, 32, 0.6), rgba(11, 18, 32, 0.3));
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  z-index: 1000;
 }
 
 .topbar-inner {
@@ -71,6 +72,38 @@ body {
   color: var(--muted);
   text-decoration: none
 }
+
+/* --- Hamburger Menu Styles --- */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--muted);
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.is-active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.is-active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+/* --- End Hamburger Menu Styles --- */
 
 .hero {
   padding: 56px 0
@@ -238,7 +271,7 @@ section h2 {
   text-decoration: none
 }
 
-/* Responsive */
+/* --- Responsive Layout --- */
 @media (max-width:1000px) {
   .hero-grid {
     grid-template-columns: 1fr 1fr
@@ -251,10 +284,55 @@ section h2 {
 
 @media (max-width:700px) {
   .topbar-inner {
-    flex-direction: column;
-    gap: 10px
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
+  /* Key fix: Set nav to be an absolute-positioned dropdown */
+  .nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Position right below the topbar */
+    left: 0;
+    width: 100%;
+    background: var(--bg);
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 0;
+    z-index: 999;
+    
+    /* Initially hide the menu with max-height */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+  
+  .nav.is-open {
+    max-height: 200px; /* Adjust this value as needed to fit all links */
+  }
+
+  .nav a {
+    margin: 0;
+    padding: 12px 16px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Show/hide buttons */
+  .menu-toggle {
+    display: block;
+  }
+  
+  .socials, .nav {
+    display: none; /* Hide socials and nav on small screens by default */
+  }
+
+  .nav.is-open {
+    display: flex; /* Show nav when active */
+  }
+  
+  /* General mobile layout adjustments */
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 22px

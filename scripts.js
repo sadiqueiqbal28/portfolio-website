@@ -11,24 +11,25 @@ document.addEventListener('DOMContentLoaded', function () {
         const el = document.querySelector(href);
         if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    })
-  })
+    });
+  });
 
-  // Contact form simple handler (no backend) — show success and clear
-  const form = document.getElementById('contactForm');
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const name = form.name.value.trim();
-      if (!name) { alert('Please enter name'); return }
-      // simple success toast
-      const btn = form.querySelector('button');
-      btn.textContent = 'Sending...';
-      setTimeout(() => {
-        btn.textContent = 'Send message';
-        alert('Thanks ' + name + " — I will get back to you soon (this is a demo form).\nReplace form handler with your email/endpoint to receive messages.");
-        form.reset();
-      }, 900);
-    })
+  // Hamburger menu functionality
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav');
+
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('is-active');
+      nav.classList.toggle('is-open');
+    });
+
+    // Close menu when a link is clicked
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('is-active');
+        nav.classList.remove('is-open');
+      });
+    });
   }
 });
