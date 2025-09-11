@@ -10,28 +10,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/favicon.png">
-
 </head>
 
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="logo" href="#">Sadique<span class="dot">.</span></a>
-      <button class="menu-toggle" aria-label="Toggle navigation menu">
+      
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-controls="header-menu" aria-expanded="false">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="socials">
-        <a href="https://github.com/sadiqueiqbal28" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
-        <a href="https://www.linkedin.com/in/sadiqueiqbal28/" target="_blank" rel="noopener"
-          aria-label="LinkedIn">LinkedIn</a>
+
+      <div class="header-menu" id="header-menu">
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="socials">
+          <a href="https://github.com/sadiqueiqbal28" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+          <a href="https://www.linkedin.com/in/sadiqueiqbal28/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        </div>
       </div>
     </div>
   </header>
@@ -73,17 +75,13 @@
       </div>
     </section>
 
-    
     <section class="container about" id="about">
       <h2>About</h2>
       <p>
-Hi, I’m Mohammad Sadique Iqbal, a passionate DevOps Engineer with hands-on experience in cloud platforms, automation, and CI/CD pipelines. I specialize in deploying and managing applications on AWS, Digital Ocean, and containerized environments using Docker and Kubernetes.
-
-During my time at Big Oh Notation Pvt. Ltd., I worked on real-world projects where I deployed applications as Kubernetes clusters, containerized applications, and configured cloud services like Redis, Kafka, WordPress, and MySQL. Earlier, as a Server Administration Intern at Netcamp Solutions, I gained practical experience in setting up Linux servers, configuring mail and DNS servers, and hosting websites.
-
-I’m always eager to learn, solve problems, and take on new challenges in the ever-evolving DevOps and cloud ecosystem.
-
-When I’m not working with servers and pipelines, you’ll probably find me in a restaurant or exploring new tech.
+        Hi, I’m Mohammad Sadique Iqbal, a passionate DevOps Engineer with hands-on experience in cloud platforms, automation, and CI/CD pipelines. I specialize in deploying and managing applications on AWS, Digital Ocean, and containerized environments using Docker and Kubernetes.
+        During my time at Big Oh Notation Pvt. Ltd., I worked on real-world projects where I deployed applications as Kubernetes clusters, containerized applications, and configured cloud services like Redis, Kafka, WordPress, and MySQL. Earlier, as a Server Administration Intern at Netcamp Solutions, I gained practical experience in setting up Linux servers, configuring mail and DNS servers, and hosting websites.
+        I’m always eager to learn, solve problems, and take on new challenges in the ever-evolving DevOps and cloud ecosystem.
+        When I’m not working with servers and pipelines, you’ll probably find me in a restaurant or exploring new tech.
       </p>
     </section>
 
@@ -110,7 +108,6 @@ When I’m not working with servers and pipelines, you’ll probably find me in 
             </div>
           </div>
         </article>
-
       </div>
     </section>
 
