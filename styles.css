@@ -392,3 +392,32 @@ section h2 {
     gap: 8px;
   }
 }
+
+/* --- Education Section --- */
+.education-list {
+  display: grid;
+  gap: 18px;
+}
+
+.education-item {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--glass);
+}
+
+.education-item h3 {
+  margin: 0 0 4px 0;
+  color: #e6eef6;
+}
+
+.education-item .institution {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.education-item .year {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
