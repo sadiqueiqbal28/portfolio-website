@@ -16,7 +16,7 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="logo" href="#">Sadique<span class="dot">.</span></a>
-      
+
       <button class="menu-toggle" aria-label="Toggle navigation menu" aria-controls="header-menu" aria-expanded="false">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -33,7 +33,8 @@
         </nav>
         <div class="socials">
           <a href="https://github.com/sadiqueiqbal28" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
-          <a href="https://www.linkedin.com/in/sadiqueiqbal28/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/sadiqueiqbal28/" target="_blank" rel="noopener"
+            aria-label="LinkedIn">LinkedIn</a>
         </div>
       </div>
     </div>
@@ -79,9 +80,15 @@
     <section class="container about" id="about">
       <h2>About</h2>
       <p>
-        Hi, I’m Mohammad Sadique Iqbal, a passionate DevOps Engineer with hands-on experience in cloud platforms, automation, and CI/CD pipelines. I specialize in deploying and managing applications on AWS, Digital Ocean, and containerized environments using Docker and Kubernetes.
-        During my time at Big Oh Notation Pvt. Ltd., I worked on real-world projects where I deployed applications as Kubernetes clusters, containerized applications, and configured cloud services like Redis, Kafka, WordPress, and MySQL. Earlier, as a Server Administration Intern at Netcamp Solutions, I gained practical experience in setting up Linux servers, configuring mail and DNS servers, and hosting websites.
-        I’m always eager to learn, solve problems, and take on new challenges in the ever-evolving DevOps and cloud ecosystem.
+        Hi, I’m Mohammad Sadique Iqbal, a passionate DevOps Engineer with hands-on experience in cloud platforms,
+        automation, and CI/CD pipelines. I specialize in deploying and managing applications on AWS, Digital Ocean, and
+        containerized environments using Docker and Kubernetes.
+        During my time at Big Oh Notation Pvt. Ltd., I worked on real-world projects where I deployed applications as
+        Kubernetes clusters, containerized applications, and configured cloud services like Redis, Kafka, WordPress, and
+        MySQL. Earlier, as a Server Administration Intern at Netcamp Solutions, I gained practical experience in setting
+        up Linux servers, configuring mail and DNS servers, and hosting websites.
+        I’m always eager to learn, solve problems, and take on new challenges in the ever-evolving DevOps and cloud
+        ecosystem.
         When I’m not working with servers and pipelines, you’ll probably find me in a restaurant or exploring new tech.
       </p>
     </section>
@@ -110,10 +117,36 @@
     <section class="container projects" id="projects">
       <h2>Projects</h2>
       <div class="grid projects-grid">
+
+        <article class="card project-card">
+          <div class="card-body">
+            <h3>Kubernetes on EKS: two microservices behind Ingress.</h3>
+            <p>Deployed a personal portfolio service from a container image and a second service using the official
+              NGINX image, then exposed both through a single Nginx Ingress controller with path-based routing for
+              clean, public access.</p>
+            <div class="card-links">
+              <a href="https://www.linkedin.com/posts/sadiqueiqbal28_kubernetes-aws-eks-activity-7377371923082776576-8N69?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_KJk8Bt6NuKfhP2Slgl9aLl2gKAl3iPTA"
+                class="curr-site">LinkedIn Post</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <div class="card-body">
+            <h3>Kubernetes Job with Python Automation</h3>
+            <p>Containerized a Python email automation script and executed it as a Kubernetes Job to demonstrate one-time workloads. Configured credentials using ConfigMaps for practice, with a planned migration to Kubernetes Secrets for secure sensitive data management.</p>
+            <div class="card-links">
+              <a href="https://www.linkedin.com/posts/sadiqueiqbal28_devops-kubernetes-docker-activity-7374873525813202944-sDPK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_KJk8Bt6NuKfhP2Slgl9aLl2gKAl3iPTA"
+                class="curr-site">LinkedIn Post</a>
+            </div>
+          </div>
+        </article>
+
         <article class="card project-card">
           <div class="card-body">
             <h3>CI/CD for Static Site</h3>
-            <p>Automated deployment of this portfolio-website to Nginx using GitHub Actions and an EC2 self-hosted runner.
+            <p>Automated deployment of this portfolio-website to Nginx using GitHub Actions and an EC2 self-hosted
+              runner.
               Workflow includes build, test, and deployment steps.</p>
             <div class="card-links">
               <a href="https://sadiqueiqbal.com" class="curr-site">(Current Website - Automated CI/CD)</a>
@@ -124,7 +157,9 @@
         <article class="card project-card">
           <div class="card-body">
             <h3>CI Pipeline Monitoring & Alerts</h3>
-            <p>Built a Python-based monitoring tool integrated with Jenkins to track system resources. Configured automated email alerts for high CPU, memory, or disk usage, with secure secret management and error handling for reliability.</p>
+            <p>Built a Python-based monitoring tool integrated with Jenkins to track system resources. Configured
+              automated email alerts for high CPU, memory, or disk usage, with secure secret management and error
+              handling for reliability.</p>
             <div class="card-links">
               <a href="https://github.com/sadiqueiqbal28/mail-system-resources.git" target="_blank">Repo</a>
             </div>
@@ -132,18 +167,9 @@
         </article>
       </div>
 
-        <article class="card project-card">
-          <div class="card-body">
-            <h3>Kubernetes on EKS: two microservices behind Ingress.</h3>
-            <p>Deployed a personal portfolio service from a container image and a second service using the official NGINX image, then exposed both through a single Nginx Ingress controller with path-based routing for clean, public access.</p>
-            <div class="card-links">
-              <a href="https://www.linkedin.com/posts/sadiqueiqbal28_kubernetes-aws-eks-activity-7377371923082776576-8N69?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_KJk8Bt6NuKfhP2Slgl9aLl2gKAl3iPTA" class="curr-site">LinkedIn Post</a>
-            </div>
-          </div>
-        </article>
     </section>
 
-    
+
     <section class="container skills" id="skills">
       <h2>Skills</h2>
       <div class="skills-list">
@@ -164,7 +190,8 @@
       <h2>Contact</h2>
       <p>If you'd like to collaborate or read my blogs, drop a message.</p>
       <div class="contact-links">
-        <a class="btn primary" href="mailto:sadiqueiqbal28@gmail.com?subject=Inquiry from your website&body=Hello Sadique,">Send an email</a>
+        <a class="btn primary"
+          href="mailto:sadiqueiqbal28@gmail.com?subject=Inquiry from your website&body=Hello Sadique,">Send an email</a>
       </div>
       <p class="small">Or reach me on <a href="https://github.com/sadiqueiqbal28" target="_blank">GitHub</a> or <a
           href="https://linkedin.com/in/sadiqueiqbal28" target="_blank">LinkedIn</a>.</p>
