@@ -1,0 +1,7 @@
+name: sadique-website
+
+services:
+  web:
+    image: sadiqueiqbal28/portfolio-image
+    ports: 
+      - "80:80"
