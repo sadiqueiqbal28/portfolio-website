@@ -1,48 +1,13 @@
-# Redirect all HTTP traffic to HTTPS
 server {
-    if ($host = www.sadiqueiqbal.com) {
-        return 301 https://$host$request_uri;
-    } # managed by Certbot
-
-
-    if ($host = sadiqueiqbal.com) {
-        return 301 https://$host$request_uri;
-    } # managed by Certbot
-
-
     listen 80;
     listen [::]:80;
-    server_name sadiqueiqbal.com www.sadiqueiqbal.com;
 
-    return 301 https://$host$request_uri;
-
-
-
-
-}
-
-# HTTPS server block
-server {
-    listen 443 ssl;
-    listen [::]:443 ssl;
     server_name sadiqueiqbal.com www.sadiqueiqbal.com;
 
     root /var/www/sadiqueiqbal/html;
-    index index.html index.htm index.nginx-debian.html;
-
-    # SSL Certificate and Key (self-signed)
-    ssl_certificate /etc/letsencrypt/live/sadiqueiqbal.com/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/sadiqueiqbal.com/privkey.pem; # managed by Certbot
-    ssl_dhparam /etc/ssl/certs/dhparam.pem;
-
-    # SSL settings (secure but compatible)
-    ssl_protocols TLSv1.2 TLSv1.3;
-    ssl_ciphers HIGH:!aNULL:!MD5;
-    ssl_prefer_server_ciphers on;
+    index index.html index.htm;
 
     location / {
         try_files $uri $uri/ =404;
     }
-
-
 }
