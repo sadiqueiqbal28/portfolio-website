@@ -43,7 +43,9 @@ h1, h2, h3 { color: #fff; font-weight: 700; letter-spacing: -0.02em; }
 .text-gradient {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 .section-title { 
   font-size: 2rem; margin-bottom: 2.5rem; position: relative; display: inline-block; 
