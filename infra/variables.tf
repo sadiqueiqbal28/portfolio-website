@@ -58,20 +58,20 @@ variable "ami" {
 
 # -----------------Jenkins Server Configuration--------------------------------
 
-# Jenkins Security Group Ports
-variable "jenkins_ports" {
-  default = [22, 8080, 80]
-  type    = list(number)
-}
+## Jenkins Security Group Ports
+# variable "jenkins_ports" {
+#   default = [22, 8080, 80]
+#   type    = list(number)
+# }
 
-# Jenkins Key Name
-variable "jenkins_key_name" {
-  default = "jenkins_key"
-  type = string
-}
+# # Jenkins Key Name
+# variable "jenkins_key_name" {
+#   default = "jenkins_key"
+#   type = string
+# }
 
-# Jenkins Public Key
-variable "jenkins_public_key" {
-  default = "jenkins_key.pub"
-  type = string 
-}
+# # Jenkins Public Key
+# variable "jenkins_public_key" {
+#   default = "jenkins_key.pub"
+#   type = string 
+# }

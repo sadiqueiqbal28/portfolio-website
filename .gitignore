@@ -1,3 +1,7 @@
 *.pub
 jenkins
+bastion
 .github/
+.terraform/
+.terraform.lock.hcl
+*.tfstate

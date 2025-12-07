@@ -2,3 +2,4 @@ docker-compose.yml
 infra/
 .github/
 .gitignore
+k8s/

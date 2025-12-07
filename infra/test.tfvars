@@ -8,6 +8,6 @@ bastion_ebs_volume = 8
 var.ami = "ami-02b8269d5e85954ef"
 
 # Jenkins Server configuration
-jenkins_key_name = "jenkins_key"
-jenkins_public_key = "jenkins_key.pub"
-jenkins_ports = [ 22,80,8080 ]
+# jenkins_key_name = "jenkins_key"
+# jenkins_public_key = "jenkins_key.pub"
+# jenkins_ports = [ 22,80,8080 ]

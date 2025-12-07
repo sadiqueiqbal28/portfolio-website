@@ -5,19 +5,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sadique Iqbal — DevOps Engineer</title>
+  <meta name="description" content="Portfolio of Sadique Iqbal, a DevOps Engineer specializing in Terraform, AWS, and Kubernetes.">
+  
   <link rel="stylesheet" href="styles.css" />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+  <div class="bg-glow"></div>
+
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="logo" href="#">Sadique<span class="dot">.</span></a>
 
-      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-controls="header-menu" aria-expanded="false">
+      <button class="menu-toggle" aria-label="Toggle navigation menu">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -26,15 +32,14 @@
       <div class="header-menu" id="header-menu">
         <nav class="nav">
           <a href="#about">About</a>
-          <a href="#education">Education</a>
-          <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
         </nav>
         <div class="socials">
-          <a href="https://github.com/sadiqueiqbal28" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
-          <a href="https://www.linkedin.com/in/sadiqueiqbal28/" target="_blank" rel="noopener"
-            aria-label="LinkedIn">LinkedIn</a>
+          <a href="https://github.com/sadiqueiqbal28" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sadiqueiqbal28/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:sadiqueiqbal28@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
     </div>
@@ -43,183 +48,240 @@
   <main>
     <section class="hero" id="home">
       <div class="container hero-grid">
-        <div class="hero-text">
-          <h1>Hi, I'm <span class="accent">Sadique</span></h1>
-          <p class="lead">A DevOps Engineer passionate about automation, cloud, and documentation. I build reliable
-            CI/CD pipelines, deploy production-grade apps, and write about what I learn.</p>
+        <div class="hero-text fade-in">
+          <div class="badge">Terraform • AWS • Kubernetes</div>
+          
+          <h1>Automating Cloud Infrastructure with <span class="text-gradient">Terraform</span></h1>
+          
+          <p class="lead">Hi, I'm <strong>Sadique Iqbal</strong>. A DevOps Engineer who builds self-healing infrastructure. I specialize in <strong>IaC (Terraform)</strong>, CI/CD pipelines, and container orchestration.</p>
 
           <div class="hero-ctas">
-            <a class="btn primary" href="#projects">See my work</a>
-            <a class="btn outline" href="#contact">Contact me</a>
+            <a class="btn primary" href="#projects">View Infrastructure</a>
+            <a class="btn outline" href="#contact">Contact Me</a>
           </div>
 
-          <ul class="hero-stats">
-            <li><strong>DevOps </strong><span>CI/CD • Docker • K8s</span></li>
-            <li><strong>Scripting </strong><span>Bash • Python</span></li>
-            <li><strong>Cloud </strong><span>AWS • DigitalOcean</span></li>
-          </ul>
+          <div class="tech-stack-mini">
+            <span><i class="fas fa-cubes"></i> Terraform</span>
+            <span><i class="fab fa-aws"></i> AWS</span>
+            <span><i class="fab fa-docker"></i> Docker</span>
+            <span><i class="fas fa-network-wired"></i> K8s</span>
+          </div>
         </div>
 
-        <div class="hero-profile">
+        <div class="hero-profile fade-in delay">
           <div class="profile-card">
-            <img src="assets/profile.jpg" alt="Sadique profile" class="profile-photo"
-              onerror="this.src='https://via.placeholder.com/300x300?text=Profile'" />
+            <div class="img-wrapper">
+              <img src="assets/profile.jpg" alt="Sadique profile" class="profile-photo"
+                onerror="this.src='https://ui-avatars.com/api/?name=Sadique+Iqbal&background=7c5cff&color=fff&size=200'" />
+            </div>
             <div class="profile-info">
               <h3>Sadique Iqbal</h3>
-              <p>DevOps Engineer • Technical Writer</p>
-              <div class="profile-links">
-                <a href="https://github.com/sadiqueiqbal28" target="_blank" rel="noopener">GitHub</a>
-                <a href="https://www.linkedin.com/in/sadiqueiqbal28/" target="_blank" rel="noopener">LinkedIn</a>
-              </div>
+              <p class="role">DevOps Engineer</p>
+              <div class="status"><span class="indicator"></span> Open to work</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="container about" id="about">
-      <h2>About</h2>
-      <p>
-        Hi, I’m Mohammad Sadique Iqbal, a passionate DevOps Engineer with hands-on experience in cloud platforms,
-        automation, and CI/CD pipelines. I specialize in deploying and managing applications on AWS, Digital Ocean, and
-        containerized environments using Docker and Kubernetes.
-        During my time at Big Oh Notation Pvt. Ltd., I worked on real-world projects where I deployed applications as
-        Kubernetes clusters, containerized applications, and configured cloud services like Redis, Kafka, WordPress, and
-        MySQL. Earlier, as a Server Administration Intern at Netcamp Solutions, I gained practical experience in setting
-        up Linux servers, configuring mail and DNS servers, and hosting websites.
-        I’m always eager to learn, solve problems, and take on new challenges in the ever-evolving DevOps and cloud
-        ecosystem.
-        When I’m not working with servers and pipelines, you’ll probably find me in a restaurant or exploring new tech.
-      </p>
-    </section>
-
-    <section class="container education" id="education">
-      <h2>Education</h2>
-      <div class="education-list">
-        <div class="education-item">
-          <h3>Bachelor of Technology (CSE)</h3>
-          <p class="institution">IMS Engineering College, Ghaziabad</p>
-          <p class="year">2020 - 2024</p>
-        </div>
-        <div class="education-item">
-          <h3>Intermediate / Class XII</h3>
-          <p class="institution">Fatima Sr. Secondary School, Gonda</p>
-          <p class="year">2019</p>
-        </div>
-        <div class="education-item">
-          <h3>High School / Class X</h3>
-          <p class="institution">Fatima Sr. Secondary School, Gonda</p>
-          <p class="year">2017</p>
-        </div>
+    <section class="container section-pad" id="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content fade-in">
+        <p>
+          I am a DevOps Engineer with a knack for uncomplicating infrastructure. With hands-on experience in <strong>AWS, Terraform, and Kubernetes</strong>, I specialize in building CI/CD pipelines that developers love to use.
+        </p>
+        <p>
+          Previously at <strong>Big Oh Notation Pvt. Ltd.</strong>, I worked on production-grade Kubernetes clusters and optimized cloud resources. Before that, I cut my teeth on Linux server administration at <strong>Netcamp Solutions</strong>.
+        </p>
       </div>
     </section>
 
-    <section class="container projects" id="projects">
-      <h2>Projects</h2>
+    <section class="container section-pad" id="skills">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid fade-in">
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-cloud"></i> Cloud & IaC</h3>
+          <div class="skill-tags">
+            <span>Terraform</span>
+            <span>AWS (EC2, VPC, S3, RDS)</span>
+            <span>Ansible</span>
+            <span>DigitalOcean</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fab fa-docker"></i> Containerization</h3>
+          <div class="skill-tags">
+            <span>Docker & Compose</span>
+            <span>Kubernetes (EKS)</span>
+            <span>Helm Charts</span>
+            <span>Ingress Nginx</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-sync"></i> CI/CD & Scripting</h3>
+          <div class="skill-tags">
+            <span>Jenkins</span>
+            <span>GitHub Actions</span>
+            <span>GitLab CI</span>
+            <span>Bash & Python</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-server"></i> Ops & Tools</h3>
+          <div class="skill-tags">
+            <span>Linux (RHEL/Ubuntu)</span>
+            <span>Nginx/Apache</span>
+            <span>Prometheus/Grafana</span>
+            <span>Git & GitHub</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="container section-pad" id="projects">
+      <h2 class="section-title">Featured Projects</h2>
       <div class="grid projects-grid">
 
-        <article class="card project-card">
+        <article class="card project-card fade-in">
+          <div class="card-header">
+            <i class="fas fa-cubes icon-bg"></i>
+            <h3>IaC Pipeline with Terraform & Jenkins</h3>
+          </div>
           <div class="card-body">
-            <h3>Kubernetes Horizontal Pod Autoscaling (HPA): load-based scaling</h3>
-            <p>Configured a deployment and HPA resource in Kubernetes, then generated continuous load using BusyBox containers. Monitored live pod metrics and scaling events, where pods automatically scaled up once CPU and memory crossed the 75% threshold—demonstrating real-world traffic handling similar to Netflix, Hotstar, and Flipkart.</p>
+            <p>Automated the provisioning of a custom AWS VPC (Subnets, NAT Gateways, Route Tables) using Terraform. Built a Jenkins pipeline to handle the lifecycle (`init`, `plan`, `apply`) with state locking via S3 and DynamoDB, enabling secure multi-environment infrastructure updates.</p>
+            <div class="tech-row">
+              <span class="pill">Terraform</span>
+              <span class="pill">Jenkins</span>
+              <span class="pill">AWS VPC</span>
+            </div>
             <div class="card-links">
-              <a href="https://www.linkedin.com/posts/sadiqueiqbal28_for-the-beauty-kubernetes-is-known-for-activity-7379071360070844416-Ri8P?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_KJk8Bt6NuKfhP2Slgl9aLl2gKAl3iPTA"
-                class="curr-site" target="_blank">LinkedIn Post</a>
+              <a href="https://github.com/sadiqueiqbal28" target="_blank">View Code <i class="fab fa-github"></i></a>
             </div>
           </div>
         </article>
 
-        <article class="card project-card">
+        <article class="card project-card fade-in">
+          <div class="card-header">
+            <i class="fas fa-server icon-bg"></i>
+            <h3>K8s Horizontal Autoscaling</h3>
+          </div>
           <div class="card-body">
-            <h3>Kubernetes on EKS: two microservices behind Ingress.</h3>
-            <p>Deployed a personal portfolio service from a container image and a second service using the official
-              NGINX image, then exposed both through a single Nginx Ingress controller with path-based routing for
-              clean, public access.</p>
+            <p>Designed a self-healing architecture using Kubernetes HPA. Configured pods to auto-scale based on CPU/Memory thresholds (75%) under high load generated by BusyBox, ensuring zero downtime during traffic spikes.</p>
+            <div class="tech-row">
+              <span class="pill">Kubernetes</span>
+              <span class="pill">HPA</span>
+              <span class="pill">Metrics Server</span>
+            </div>
             <div class="card-links">
-              <a href="https://www.linkedin.com/posts/sadiqueiqbal28_kubernetes-aws-eks-activity-7377371923082776576-8N69?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_KJk8Bt6NuKfhP2Slgl9aLl2gKAl3iPTA"
-                class="curr-site" target="_blank">LinkedIn Post</a>
+              <a href="https://www.linkedin.com/in/sadiqueiqbal28/" target="_blank">View Demo <i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
         </article>
 
-        <article class="card project-card">
+        <article class="card project-card fade-in">
+          <div class="card-header">
+            <i class="fas fa-network-wired icon-bg"></i>
+            <h3>Microservices on AWS EKS</h3>
+          </div>
           <div class="card-body">
-            <h3>Kubernetes Job with Python Automation</h3>
-            <p>Containerized a Python email automation script and executed it as a Kubernetes Job to demonstrate one-time workloads. Configured credentials using ConfigMaps for practice, with a planned migration to Kubernetes Secrets for secure sensitive data management.</p>
+            <p>Deployed a multi-service architecture on AWS EKS. Configured an Nginx Ingress Controller to route traffic between a portfolio service and a web server based on URL paths, simulating a real-world production routing strategy.</p>
+            <div class="tech-row">
+              <span class="pill">AWS EKS</span>
+              <span class="pill">Ingress Nginx</span>
+              <span class="pill">Docker</span>
+            </div>
             <div class="card-links">
-              <a href="https://www.linkedin.com/posts/sadiqueiqbal28_devops-kubernetes-docker-activity-7374873525813202944-sDPK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC_KJk8Bt6NuKfhP2Slgl9aLl2gKAl3iPTA"
-                class="curr-site" target="_blank">LinkedIn Post</a>
+              <a href="https://www.linkedin.com/in/sadiqueiqbal28/" target="_blank">View Post <i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
         </article>
 
-        <article class="card project-card">
+        <article class="card project-card fade-in">
+          <div class="card-header">
+            <i class="fas fa-database icon-bg"></i>
+            <h3>Containerized 3-Tier App</h3>
+          </div>
           <div class="card-body">
-            <h3>CI/CD for Static Site</h3>
-            <p>Automated deployment of this portfolio-website to Nginx using GitHub Actions and an EC2 self-hosted
-              runner.
-              Workflow includes build, test, and deployment steps.</p>
+            <p>Orchestrated a full-stack application using Docker Compose. Connected a Node.js backend to a persistent MongoDB container, implementing secure environment variable management for database credentials.</p>
+            <div class="tech-row">
+              <span class="pill">Docker Compose</span>
+              <span class="pill">MongoDB</span>
+              <span class="pill">Node.js</span>
+            </div>
             <div class="card-links">
-              <a href="https://sadiqueiqbal.com" class="curr-site">(Current Website - Automated CI/CD)</a>
+              <a href="https://github.com/sadiqueiqbal28" target="_blank">View Repo <i class="fab fa-github"></i></a>
             </div>
           </div>
         </article>
 
-        <article class="card project-card">
+        <article class="card project-card fade-in">
+          <div class="card-header">
+            <i class="fas fa-rocket icon-bg"></i>
+            <h3>Automated CI/CD Pipeline</h3>
+          </div>
           <div class="card-body">
-            <h3>CI Pipeline Monitoring & Alerts</h3>
-            <p>Built a Python-based monitoring tool integrated with Jenkins to track system resources. Configured
-              automated email alerts for high CPU, memory, or disk usage, with secure secret management and error
-              handling for reliability.</p>
+            <p>Engineered a complete CI/CD workflow for this portfolio. Uses GitHub Actions with a self-hosted EC2 runner to automatically build, test, and deploy code changes to an Nginx web server upon every commit.</p>
+            <div class="tech-row">
+              <span class="pill">GitHub Actions</span>
+              <span class="pill">AWS EC2</span>
+              <span class="pill">Nginx</span>
+            </div>
             <div class="card-links">
-              <a href="https://github.com/sadiqueiqbal28/mail-system-resources.git" target="_blank">Repo</a>
+              <a href="#" target="_blank">Live Site <i class="fas fa-bolt"></i></a>
             </div>
           </div>
         </article>
+
       </div>
-
     </section>
 
-
-    <section class="container skills" id="skills">
-      <h2>Skills</h2>
-      <div class="skills-list">
-        <div class="skill">AWS (Amazon Web Services)</div>
-        <div class="skill">Kubernetes</div>
-        <div class="skill">Docker</div>
-        <div class="skill">Jenkins</div>
-        <div class="skill">GitHub Actions</div>
-        <div class="skill">Continuous Integration/Continuous Deployment</div>
-        <div class="skill">Bash Scripting</div>
-        <div class="skill">Python</div>
-        <div class="skill">Linux (Ubuntu/RedHat)</div>
-        <div class="skill">GitLab</div>
+    <section class="container section-pad" id="education">
+      <h2 class="section-title">Education</h2>
+      <div class="timeline">
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>B.Tech in Computer Science</h3>
+            <p class="inst">IMS Engineering College, Ghaziabad</p>
+            <span class="time">2020 - 2024</span>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Intermediate (XII)</h3>
+            <p class="inst">Fatima Sr. Secondary School</p>
+            <span class="time">2019</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="container contact" id="contact">
-      <h2>Contact</h2>
-      <p>If you'd like to collaborate or read my blogs, drop a message.</p>
-      <div class="contact-links">
-        <a class="btn primary"
-          href="mailto:sadiqueiqbal28@gmail.com?subject=Inquiry from your website&body=Hello Sadique,">Send an email</a>
+    <section class="container section-pad contact" id="contact">
+      <div class="contact-box fade-in">
+        <h2>Let's automate something together.</h2>
+        <p>Whether you have a question about my Terraform modules or want to discuss a DevOps role, my inbox is open.</p>
+        <a class="btn primary big-btn" href="mailto:sadiqueiqbal28@gmail.com">Say Hello <i class="fas fa-paper-plane"></i></a>
+        
+        <div class="footer-links">
+          <a href="https://github.com/sadiqueiqbal28" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/sadiqueiqbal28" target="_blank">LinkedIn</a>
+        </div>
       </div>
-      <p class="small">Or reach me on <a href="https://github.com/sadiqueiqbal28" target="_blank">GitHub</a> or <a
-          href="https://linkedin.com/in/sadiqueiqbal28" target="_blank">LinkedIn</a>.</p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Sadique Iqbal — Built with ❤️</p>
-      <nav class="footer-nav">
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <div class="container text-center">
+      <p>© <span id="year"></span> Sadique Iqbal. Built with ❤️ and DevOps.</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>

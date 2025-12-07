@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-deployment
+  namespace: dev
+spec:
+  selector:
+    matchLabels:
+      app: pw-dev
+  template:
+    metadata:
+      labels:
+        app: pw-dev
+    spec:
+      containers:
+      - name: portfolio-container
+        image: sadiqueiqbal28/portfolio-website
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+        ports:
+        - containerPort: 80
