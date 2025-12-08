@@ -42,6 +42,12 @@ pipeline {
                     sh "docker push ${env.DOCKER_USER}/${env.DOCKER_IMAGE_NAME}:latest"
                 }
             }
+        stage("Deploy") {
+            steps {
+                echo "Deploying code on k8s Cluster"
+                sh "helm install portfollio-app k8s/portfolio*.tgz"
+            }
+        }
         }
     }
 }
